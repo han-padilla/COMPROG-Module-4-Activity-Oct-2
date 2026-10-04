@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    int Months;
+    double BTuition, PFeeper, DPayment;
+    double PFee, ATuition, RBalance, MInstallment;
+   
+    cout << "TUITION INSTALLMENT PLAN\n";
+        cout << "\nEnter Base Tuition Fee : ₱";
+        cin >> BTuition;
+        cout << "Enter Processing Fee Percentage : ";
+        cin >> PFeeper;
+        cout << "Enter Downpayment : ₱";
+        cin >> DPayment;
+        cout << "Enter Number of Monthly Installments : ";
+        cin >> Months;
+        
+    //calculations 
+    PFee = BTuition * (PFeeper/100);
+    ATuition = PFee + BTuition;
+    RBalance = ATuition - DPayment;
+    MInstallment = RBalance / (double) Months;
+    
+    cout << "\nPAYMENT CALCULATION & COST BREAKDOWN\n";
+        cout << fixed << setprecision(2) << "\nProcessing Fee : ₱" << PFee;
+        cout << fixed << setprecision(2) << "\nAdjusted Tuition : ₱" << ATuition;
+        cout << fixed << setprecision(2) << "\nRemaining Balance : ₱" << RBalance;
+        cout << fixed << setprecision(2) << "\nMonthly Installments : ₱" << MInstallment << " for " << Months << " months";
+    
+    
+    return 0;
+}
