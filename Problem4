@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double Wwidth, Wheight, Ncoats, Coverage;
+    double Warea, Parea, Tcans;
+    
+    cout << "Please enter the Width of your wall in meters: ";
+    cin >> Wwidth;
+    
+    cout << "Please enter the Height of your wall in meters: ";
+    cin >> Wheight;
+    
+    cout << "Please enter the Number of Coats you will have to paint: ";
+    cin >> Ncoats;
+    
+    cout << "Please enter the Coverage in square meters each paint can will give: ";
+    cin >> Coverage;
+    
+    //input done
+    
+    Warea = Wwidth * Wheight;
+        cout << fixed << setprecision (2) << "\nYour total Wall Area in square meters is " << Warea;
+    
+    Parea = Warea + Ncoats;
+        cout << fixed << setprecision (2) << "\n The total Paint Area in square meters is " << Parea;
+    
+    Tcans = Parea/Coverage ;
+        cout << fixed << setprecision (2) << "\n The total cans you NEED is " << Tcans;
+        cout << fixed << setprecision (2) << "\n The total cans you have to BUY is " << ceil(Tcans);
+
+    return 0;
+}
