@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    float x1, x2, y1, y2;
+    float dx, dy, distance, rdistance;
+    
+    cout << "STARTING POINT COORDINATES \n";
+    cout << " Enter x1 : ";
+        cin >> x1;
+    cout << " Enter x2 : ";
+        cin >> x2;
+        dx = x2 - x1;
+    
+    cout << "\nTARGET COORDINATES \n";
+    cout << " Enter y1 : ";
+        cin >> y1;
+    cout << " Enter y2 : ";
+        cin >> y2;
+        dy = y2 - y1;
+        
+    distance = sqrt(pow(dx,2) + pow(dy,2));
+    rdistance = abs(distance);
+    
+    cout << "\nOUTPUT";
+    cout << fixed << setprecision(3) << "\n dx : " << dx;
+    cout << fixed << setprecision(3) << "\n dy : " << dy;
+    cout << fixed << setprecision(3) << "\n Final Distance : " << abs(distance);
+    cout << "\n Rounded Distance : " << (int)round(rdistance);
+
+    return 0;
+}
