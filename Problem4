@@ -25,7 +25,7 @@ int main()
     Warea = Wwidth * Wheight;
         cout << fixed << setprecision (2) << "\nYour total Wall Area in square meters is " << Warea;
     
-    Parea = Warea + Ncoats;
+    Parea = Warea * Ncoats;
         cout << fixed << setprecision (2) << "\n The total Paint Area in square meters is " << Parea;
     
     Tcans = Parea/Coverage ;
