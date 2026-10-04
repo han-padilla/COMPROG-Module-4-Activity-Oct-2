@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double quiz, lab, project, exam, Wgrade;
+    
+    cout << "Please enter your Quiz grade as a decimal value:";
+    cin >> quiz;
+    
+    cout << "Please enter your Lab grade as a decimal value:";
+    cin >> lab;
+    
+    cout << "Please enter your Project grade as a decimal value:";
+    cin >> project;
+    
+    cout << "Please enter your Exam grade as a decimal value:";
+    cin >> exam;
+    cout << "\n ";
+    
+    Wgrade = (quiz + lab + project + exam)/4;
+    cout << fixed << setprecision(2) << "Your Weighted Grade is "<< Wgrade;
+    
+    cout << "\n Your Rounded Grade is " << round(Wgrade);
+    cout << "\n Your Truncated Grade is " << trunc(Wgrade);
+    
+    
+    return 0;
+}
