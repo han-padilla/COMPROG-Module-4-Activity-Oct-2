@@ -1,0 +1,29 @@
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int Attendees, SPerTable;
+    double Treq, Tseats, Useats;
+  
+  cout << "Please enter the number of Attendees: ";
+  cin >> Attendees;
+  
+  cout << "Please enter the number of Seats per Round Table: ";
+  cin >> SPerTable;
+  
+  Treq = (double)Attendees/SPerTable;
+    cout << fixed << setprecision (2) << "\n You will need exactly " << Treq << " tables to accomodate the attendees.";
+    cout << "\n And you will require " << ceil(Treq) << " tables at the venue.";
+  
+  Tseats = ceil(Treq) * SPerTable;
+    cout << "\n There will be a total of " << (int)Tseats << " seats available at the venue tables.";
+  
+  Useats = Tseats - Attendees;
+    cout << "\n While a total of " << (int)Useats << " seats will be unnocupied at the venue tables.";
+  
+
+    return 0;
+}
