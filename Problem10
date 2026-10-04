@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	string Product;
+	double UnitPrice, Quantity, DiscPer, ShFee, UnitsPB;
+	double SubTotal, Discount, DTotal, Merch, ExBox, Boxes, Shipping, AmountDue;
+
+	cout << "COMPROG ONLINE STORE\a \n";
+	cout << "\nEnter Product Name : ";
+	getline(cin, Product);
+	cout << "Enter Unit Price : ₱";
+	cin >> UnitPrice;
+	cout << "Enter Quantity of Order/s : ";
+	cin >> Quantity;
+	cout << "Enter Discount Percentage : ";
+	cin >> DiscPer;
+	cout << "Enter Shipping Fee Per Box : ₱";
+	cin >> ShFee;
+	cout << "Enter Units per Box : ";
+	cin >> UnitsPB;
+
+	//computations
+	SubTotal = UnitPrice * Quantity;
+	Discount = SubTotal * (DiscPer/100);
+	DTotal = SubTotal + Discount;
+	Merch = Quantity * UnitsPB; 
+	ExBox = Quantity/UnitsPB;
+	Boxes = ceil(ExBox);
+	Shipping = Boxes * ShFee; 
+	AmountDue = DTotal + Shipping; 
+
+	//receipt
+	cout << " \n";
+	cout << string(40, '=');
+
+	cout << "\nORDER DETAIL FOR " << Product << " \a \n";
+	cout << string(40, '-');
+	
+	cout << "\nUnit Price" << "\t " << UnitPrice;
+	cout << "\nMerch Quantity" << "\t " <<Merch;
+	cout << "\nBoxes Needed" << "\t " << ExBox;
+	cout << "\nBoxes Required" << "\t " << Boxes;
+	cout << " \n";
+	cout << fixed << setprecision (2) << "\nSub Total" << "\t₱" << SubTotal;
+
+	cout << fixed << setprecision(2) << "\nDiscount" << "\t₱" << Discount;
+	cout << fixed << setprecision(2) << "\nShipping Fee" << "\t₱" << Shipping;
+	cout << " \n";
+	cout << string(40, '-');
+	cout << fixed << setprecision(2) << "\nAMOUNT DUE" << "\t₱" << AmountDue;
+    
+    cout << " \n";
+    cout << string(40, '=');
+	     
+
+	return 0;
+}
