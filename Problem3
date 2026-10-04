@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double Bfare, DistanceK, RateK, Tfee, Bfeeper, Passengers;
+    double Dcharge, Subtotal, Bfee, Grandtotal, Split;
+    
+    cout << "Please enter the Base Fare: ₱";
+    cin >> Bfare;
+    
+    cout << "Please enter the Distance in Kilometers: ";
+    cin >> DistanceK;
+    
+    cout << "Please enter the Rate per Kilometer: ₱";
+    cin >> RateK;
+    
+    cout << "Please enter the Toll Fee: ₱";
+    cin >> Tfee;
+    
+    cout << "Please enter the Booking Fee Percentage: ";
+    cin >> Bfeeper;
+    
+    cout << "Please enter the number of Passengers: ";
+    cin >> Passengers;
+    
+    Dcharge = DistanceK * RateK;
+        cout << fixed << setprecision(2) << "\nYour Distance Charge is ₱" <<Dcharge;
+    
+    Subtotal = (Bfare + Dcharge + Tfee);
+        cout << fixed << setprecision(2) << "\nYour Subtotal is ₱" << Subtotal;
+    
+    Bfee = Subtotal * (Bfeeper/100);
+        cout << fixed << setprecision(2) << "\nThe Booking fee is ₱"<< Bfee;
+    
+    Grandtotal = Bfee + Subtotal;
+        cout << fixed << setprecision(2) << "\nYour Grand Total is ₱"<< Grandtotal;
+    
+    Split = Grandtotal/Passengers;
+        cout << fixed << setprecision(2) << "\nThe price will be ₱" << Split << " per Passenger";
+
+    return 0;
+}
+}
