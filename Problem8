@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double T1, T2, T3;
+    double Average, ADiff, Floor, Ceiling, Truncate, Round;
+    
+    cout << "ENVIRONMENTAL SENSOR TEMPERATURE READINGS\n";
+        cout << "Enter First Reading : ";
+        cin >> T1;
+        
+        cout << "Enter Second Reading : ";
+        cin >> T2;
+        
+        cout << "Enter Third Reading : ";
+        cin >> T3;
+        
+    cout << "\nSENSOR SUMMARY\n";
+        Average = (T1 + T2 + T3)/3;
+        cout << fixed << setprecision(3) << "\nAverage Temperature : " << Average;
+        
+        ADiff = fabs(T1 - T3);
+        cout << fixed << setprecision(3) << "\nAbsolute Difference between First and Third Readings : " << ADiff;
+        
+        Floor = floor(Average);
+        cout << "\nFloor is : " << (int)Floor;
+        
+        Ceiling = ceil(Average);
+        cout << "\nCeiling is : " << (int)Ceiling;
+        
+        Truncate = trunc(Average);
+        cout << "\nTruncation is : " << (int)Truncate;
+        
+        Round = round(Average);
+        cout << "\nRounded is : " << (int)Round;
+        
+    return 0;
+}
