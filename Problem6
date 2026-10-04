@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+
+int main()
+{
+    double Bytes, KB, MB, GB;
+    
+    cout << "Please input your file size in bytes: ";
+    cin >> Bytes;
+    
+    KB = Bytes / 1024.0;
+        cout << fixed << setprecision(2) << "\nFile size in KB (Kilobytes): " << KB;
+        
+    MB = KB / 1024.0;
+        cout << fixed << setprecision(2) << "\nFile size in MB (Megabytes): " << MB;
+        
+    MB = KB / 1024.0;
+        cout << "\nFile size in whole MB (Megabytes): " << (int)MB;
+        
+    GB = MB / 1024.0;
+        cout << fixed << setprecision(4) << "\nFile size in GB (Gigabytes): " << GB;
+        
+    return 0;
+}
