@@ -41,7 +41,7 @@ int main()
 	cout << "\nORDER DETAIL FOR " << Product << " \a \n";
 	cout << string(40, '-');
 	
-	cout << "\nUnit Price" << "\t " << UnitPrice;
+	cout << "\nUnit Price" << "\t₱" << UnitPrice;
 	cout << "\nMerch Quantity" << "\t " <<Merch;
 	cout << "\nBoxes Needed" << "\t " << ExBox;
 	cout << "\nBoxes Required" << "\t " << Boxes;
