@@ -24,8 +24,8 @@ int main()
     Wgrade = (quiz*0.2) + (lab*0.25) + (project*0.25) + (exam*0.3);
     cout << fixed << setprecision(2) << "Your Weighted Grade is "<< Wgrade;
     
-    cout << "\n Your Rounded Grade is " << round(Wgrade);
-    cout << "\n Your Truncated Grade is " << trunc(Wgrade);
+    cout << "\n Your Rounded Grade is " << (int)round(Wgrade);
+    cout << "\n Your Truncated Grade is " << (int)trunc(Wgrade);
     
     
     return 0;
