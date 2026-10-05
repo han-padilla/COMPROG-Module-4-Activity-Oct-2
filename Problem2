@@ -5,22 +5,23 @@ using namespace std;
 
 int main()
 {
-    double quiz, lab, project, exam, Wgrade;
+    double quiz, lab, project, exam;
+    double Wgrade;
     
-    cout << "Please enter your Quiz grade as a decimal value:";
+    cout << "Please enter your Quiz grade as a decimal value: ";
     cin >> quiz;
     
-    cout << "Please enter your Lab grade as a decimal value:";
+    cout << "Please enter your Lab grade as a decimal value: ";
     cin >> lab;
     
-    cout << "Please enter your Project grade as a decimal value:";
+    cout << "Please enter your Project grade as a decimal value: ";
     cin >> project;
     
-    cout << "Please enter your Exam grade as a decimal value:";
+    cout << "Please enter your Exam grade as a decimal value: ";
     cin >> exam;
     cout << "\n ";
     
-    Wgrade = (quiz + lab + project + exam)/4;
+    Wgrade = (quiz*0.2) + (lab*0.25) + (project*0.25) + (exam*0.3);
     cout << fixed << setprecision(2) << "Your Weighted Grade is "<< Wgrade;
     
     cout << "\n Your Rounded Grade is " << round(Wgrade);
